@@ -191,7 +191,7 @@ class BoundField
 	function as_textarea($attrs=null)
 	{
 		return $this->as_widget(array(
-			'widget' => new Textarea(),
+			'widget' => new TextArea(),
 			'attrs' => $attrs
 		));
 	}
