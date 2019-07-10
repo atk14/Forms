@@ -16,12 +16,15 @@
                 "atk14/string4": "*",
                 "atk14/translate": "*",
                 "atk14/string-buffer": "*",
-                "atk14/http": "*"
+                "atk14/http": "*",
+                "atk14/functions": "*"
         },
         "require-dev": {
-                "atk14/tester": "*"
+                "atk14/tester": "*",
+                "atk14/xmole": "*"
         },
         "autoload": {
+                "files": ["src/functions.php"],
                 "classmap": ["src"]
         }
 }

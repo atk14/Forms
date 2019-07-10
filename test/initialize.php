@@ -1,7 +1,9 @@
 <?php
 define("TEST",true);
+define("FORMS_MARKUP_TUNED_FOR_BOOTSTRAP4",false);
 
-require(__DIR__ . "/../vendor/autoload.php");
+require_once(__DIR__ . "/../vendor/autoload.php");
+require_once("./custom_fields/url_field.php");
 
 /*
 require_once("../../class_autoload/class_autoload.php");
