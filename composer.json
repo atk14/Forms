@@ -14,13 +14,12 @@
         "require": {
                 "php": ">=5.3.0",
                 "atk14/string4": "*",
-                "atk14/translate": "*",
-                "atk14/string-buffer": "*",
                 "atk14/http": "*",
                 "atk14/functions": "*"
         },
         "require-dev": {
                 "atk14/tester": "*",
+                "atk14/translate": "*",
                 "atk14/xmole": "*"
         },
         "autoload": {
