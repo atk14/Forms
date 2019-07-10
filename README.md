@@ -8,7 +8,7 @@ The default form framework in the [ATK14 Framework](https://www.atk14.net/)
 Installation
 ------------
 
-The best way how to install LazyLoader is to use a Composer:
+The best way how to install Forms is to use a Composer:
 
     composer require atk14/forms
 
@@ -27,6 +27,6 @@ Run tests:
 License
 -------
 
-LazyLoader is free software distributed [under the terms of the MIT license](http://www.opensource.org/licenses/mit-license)
+Forms is free software distributed [under the terms of the MIT license](http://www.opensource.org/licenses/mit-license)
 
 [//]: # ( vim: set ts=2 et: )
