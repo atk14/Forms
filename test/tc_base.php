@@ -12,7 +12,7 @@ class TcBase extends TcSuperBase{
 
 	function _get_uploaded_jpeg(){
 		return HTTPUploadedFile::GetInstance(array(
-			"tmp_name" => dirname(__FILE__)."/../../http/test/hlava.jpg", // just borrowing a testing image :)
+			"tmp_name" => dirname(__FILE__)."/hlava.jpg",
 			"name" => "hlava.jpg",
 			"error" => 0,
 		),
