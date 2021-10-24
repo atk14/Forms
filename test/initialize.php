@@ -1,5 +1,6 @@
 <?php
 define("TEST",true);
+setlocale(LC_NUMERIC,"C");
 define("FORMS_MARKUP_TUNED_FOR_BOOTSTRAP4",false);
 
 require_once(__DIR__ . "/../vendor/autoload.php");
