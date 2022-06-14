@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to Forms will be documented in this file.
 
+## [1.0.2] - 2022-06-14
+
+* 50b1e2e - PHP 8.1 compatibility
+
 ## [1.0.1] - 2022-04-19
 
 * 1dcb620 - Pattern in EmailField improved
