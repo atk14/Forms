@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to Forms will be documented in this file.
 
+## [1.0.3] - 2022-07-26
+
+* 8325d11 - PHP 8.1 compatibility
+
 ## [1.0.2] - 2022-06-14
 
 * 50b1e2e - PHP 8.1 compatibility
