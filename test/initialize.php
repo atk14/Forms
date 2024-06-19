@@ -1,7 +1,10 @@
 <?php
 define("TEST",true);
 setlocale(LC_NUMERIC,"C");
+
 define("FORMS_MARKUP_TUNED_FOR_BOOTSTRAP4",false);
+define("FORMS_MARKUP_TUNED_FOR_BOOTSTRAP5",false);
+define("FORMS_MARKUP_TUNED_FOR_BOOTSTRAP3",false);
 
 require_once(__DIR__ . "/../vendor/autoload.php");
 require_once("./custom_fields/url_field.php");

@@ -7,6 +7,10 @@
  */
 class IntegerField extends Field
 {
+
+	var $max_value;
+	var $min_value;
+
 	function __construct($options=array())
 	{
 		$options = forms_array_merge(array(
@@ -37,7 +41,7 @@ class IntegerField extends Field
 
 	function clean($value)
 	{
-		$value = trim($value);
+		$value = trim((string)$value);
 		list($error, $value) = parent::clean($value);
 		if (!is_null($error)) {
 			return array($error, $value);

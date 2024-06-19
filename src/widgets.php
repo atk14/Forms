@@ -1,4 +1,6 @@
 <?php
+require_once(__DIR__ . "/constants.php");
+
 /**
  * Widgets -- HTML representation of form fields.
  *
@@ -36,10 +38,17 @@
  */
 class Widget
 {
+	var $is_hidden;
+	var $attrs;
+
 	/**
 	 * Is multipart encoding required for form submission?
 	 */
 	var $multipart_encoding_required = false;
+
+	var $bootstrap3;
+	var $bootstrap4;
+	var $bootstrap5;
 
 	/**
 	 * Constructor
@@ -48,7 +57,13 @@ class Widget
 	 */
 	function __construct($options=array())
 	{
-		$options = forms_array_merge(array('attrs'=>null), $options);
+		$options = forms_array_merge(array(
+			'attrs' => null,
+
+			'bootstrap3'     => FORMS_MARKUP_TUNED_FOR_BOOTSTRAP3,
+			'bootstrap4'     => FORMS_MARKUP_TUNED_FOR_BOOTSTRAP4,
+			'bootstrap5'     => FORMS_MARKUP_TUNED_FOR_BOOTSTRAP4,
+		), $options);
 		if (!isset($this->is_hidden)) {
 			$this->is_hidden = false;
 		}
@@ -58,6 +73,10 @@ class Widget
 		else {
 			$this->attrs = $options['attrs'];
 		}
+
+		$this->bootstrap3 = $options['bootstrap3'];
+		$this->bootstrap4 = $options['bootstrap4'];
+		$this->bootstrap5 = $options['bootstrap5'];
 	}
 
 	/**

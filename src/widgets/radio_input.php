@@ -1,4 +1,6 @@
 <?php
+require_once(__DIR__ . "/../constants.php");
+
 /**
  * Widget for radio button input field.
  *
@@ -10,6 +12,19 @@ class RadioInput
 	var $input_type = "radio";
 	var $convert_html_special_chars = true;
 
+	var $name;
+	var $value;
+	var $attrs;
+	var $index;
+	var $label_attrs;
+	var $wrap_attrs;
+	var $choice_value;
+	var $choice_label;
+
+	var $bootstrap3;
+	var $bootstrap4;
+	var $bootstrap5;
+
 	function __construct($name, $value, $attrs, $choice, $index, $options = array())
 	{
 		$options += array(
@@ -17,9 +32,11 @@ class RadioInput
 			"label_attrs" => array(),
 			"wrap_attrs" => array(),
 
+			"bootstrap3" => FORMS_MARKUP_TUNED_FOR_BOOTSTRAP3,
 			"bootstrap4" => FORMS_MARKUP_TUNED_FOR_BOOTSTRAP4,
+			"bootstrap5" => FORMS_MARKUP_TUNED_FOR_BOOTSTRAP5,
 		);
-		if($options["bootstrap4"]){
+		if($options["bootstrap4"] || $options["bootstrap5"]){
 			$attrs += array(
 				"class" => "form-check-input",
 			);
@@ -42,13 +59,16 @@ class RadioInput
 		$this->convert_html_special_chars = $options["convert_html_special_chars"];
 		$this->label_attrs = $options["label_attrs"];
 		$this->wrap_attrs = $options["wrap_attrs"];
-		$this->bootstrap4 = $options["bootstrap4"];
 
 		// A replacement for list($this->choice_value, $this->choice_label) = each($choice);
 		$this->choice_value = $this->choice_label = null;
 		foreach($choice as $this->choice_value => $this->choice_label){
 			break;
 		}
+
+		$this->bootstrap3 = $options['bootstrap3'];
+		$this->bootstrap4 = $options['bootstrap4'];
+		$this->bootstrap5 = $options['bootstrap5'];
 	}
 
 	function is_checked()
@@ -79,7 +99,7 @@ class RadioInput
 			$label = forms_htmlspecialchars($label);
 		}
 
-		if($this->bootstrap4){
+		if($this->bootstrap4 || $this->bootstrap5){
 			return strtr('<div%wrap_attrs%>%tag% <label%label_attrs%><span class="label__text">%label%</span></label></div>',array(
 				"%tag%" => $this->tag(),
 				"%wrap_attrs%" => flatatt($this->wrap_attrs),

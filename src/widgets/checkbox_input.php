@@ -12,6 +12,7 @@
 class CheckboxInput extends Widget
 {
 	var $input_type = "checkbox";
+	var $check_test;
 
 	function __construct($options=array())
 	{
@@ -20,15 +21,14 @@ class CheckboxInput extends Widget
 			'check_test' => null,
 
 			'bootstrap4' => FORMS_MARKUP_TUNED_FOR_BOOTSTRAP4,
+			'bootstrap5' => FORMS_MARKUP_TUNED_FOR_BOOTSTRAP5,
 		);
 
-		if($options["bootstrap4"]){
+		if($options["bootstrap4"] || $options["bootstrap5"]){
 			$options["attrs"] += array(
 				"class" => "form-check-input",
 			);
 		}
-		
-
 
 		parent::__construct($options);
 		$this->check_test = $options['check_test'];
