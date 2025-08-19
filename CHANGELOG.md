@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to Forms will be documented in this file.
 
+## [1.1.1] - 2025-08-19
+
+* 5b29ea2 - Fix for PHP8.2
+
 ## [1.1] - 2024-06-19
 
 * 8918a34 - Source code synced with the ATK14 Framework
