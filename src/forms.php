@@ -27,6 +27,8 @@ class JsFormValidator{
 	 */
 	var $validators = array();
 
+	var $_fields_html_names;
+
 	/**
 	 * Constructor
 	 *
@@ -974,16 +976,19 @@ class Form implements ArrayAccess
 	/**
 	 * @ignore
 	 */
+	#[\ReturnTypeWillChange] 
 	function offsetExists($offset){ return isset($this->fields[$offset]); }
 
 	/**
 	 * @ignore
 	 */
+	#[\ReturnTypeWillChange] 
 	function offsetGet($offset){ return $this->get_field($offset); }
 
 	/**
 	 * @ignore
 	 */
+	#[\ReturnTypeWillChange] 
 	function offsetSet($offset,$value){
 		if(!$value){
 			// $form["firstname"] = null;
@@ -996,5 +1001,6 @@ class Form implements ArrayAccess
 	/**
 	 * @ignore
 	 */
+	#[\ReturnTypeWillChange] 
 	function offsetUnset($offset){ unset($this->fields[$offset]); }
 }

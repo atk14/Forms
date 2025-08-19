@@ -1,6 +1,6 @@
 <?php
 define("TEST",true);
-setlocale(LC_NUMERIC,"C");
+setlocale(LC_NUMERIC,"C"); // we need to display float like 123.456
 
 define("FORMS_MARKUP_TUNED_FOR_BOOTSTRAP4",false);
 define("FORMS_MARKUP_TUNED_FOR_BOOTSTRAP5",false);
