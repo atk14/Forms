@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to Forms will be documented in this file.
 
+## [1.1.3] - 2025-12-09
+
+* 78f423e - Method ChoiceField::set_choices() fixed
+* dd947a0 - EmailField tuned
+
 ## [1.1.2] - 2025-08-19
 
 * Source code synced with ATK14
