@@ -1,6 +1,8 @@
 Forms
 =====
 
+[![Tests](https://github.com/atk14/Forms/actions/workflows/tests.yml/badge.svg)](https://github.com/atk14/Forms/actions/workflows/tests.yml)
+
 HTML form framework, form builder, form validator.
 
 The default form framework in the [ATK14 Framework](https://www.atk14.net/)
